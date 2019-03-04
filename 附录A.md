@@ -8,6 +8,8 @@ http://www.modcoderpack.com/
 
 旧版本镜像：http://mcp.llbit.se/
 
+旧版本维基：https://minecraft.gamepedia.com/Programs_and_editors/Mod_Coder_Pack
+
 ## MCPBot Data Exports
 
 可以从这个网站下载到最新的srg-mcp映射表。
