@@ -9,6 +9,23 @@
 这是一篇比较全面的 CoreMod 教程，请选择性阅读自己需要的部分，当然如果能有耐心阅读所有内容当然是最好不过的。  
 原版 CoreMod 部分是从 FML 如何向 Minecraft 注入代码的角度进行原理分析，非必读内容。FML CoreMod 部分也可以直接阅读欲开发的版本。
 
+## 版权声明
+本教程作者为xfl03。
+
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+    <img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
+</a><br />本作品采用
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+    知识共享署名-相同方式共享 4.0 国际许可协议
+</a>进行许可。
+
+转载请附上GitHub地址：  
+[https://github.com/xfl03/CoreModTutor](https://github.com/xfl03/CoreModTutor)
+
+
+教程中的原创代码由MIT方式开源，可自由使用。  
+教程中使用的Forge代码为LGPL形式开源，版权属于Forge团队。
+
 ## 目录
 
 ### [0 绪论](0.md)
@@ -28,12 +45,13 @@
 ### 3 原版 CoreMod
 
 * 直接修改class文件
+* JavaAgent
 * LaunchWrapper
 * ModLauncher
 
 ### 4 FML CoreMod
 
-* 1.3.2-1.5.2
+* [1.3.2-1.5.2](4.1.md)
 * [1.6.1-1.12.2](4.2.md)
 * [1.13.2](4.3.md)
 
