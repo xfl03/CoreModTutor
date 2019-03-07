@@ -8,7 +8,13 @@ http://www.modcoderpack.com/
 
 旧版本镜像：http://mcp.llbit.se/
 
-旧版本维基：https://minecraft.gamepedia.com/Programs_and_editors/Mod_Coder_Pack
+Minecraft Wiki：https://minecraft.gamepedia.com/Programs_and_editors/Mod_Coder_Pack
+
+## MCPConfig
+
+可以构建1.13大版本的notch-srg映射表。
+
+https://github.com/MinecraftForge/MCPConfig
 
 ## MCPBot Data Exports
 

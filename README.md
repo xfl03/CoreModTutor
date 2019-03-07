@@ -44,10 +44,10 @@
 
 ### 3 原版 CoreMod
 
-* 直接修改class文件
-* JavaAgent
-* LaunchWrapper
-* ModLauncher
+* [直接修改class文件](3.1.md)
+* [JavaAgent](3.2.md)
+* [LaunchWrapper](3.3.md)
+* [ModLauncher](3.4.md)
 
 ### 4 FML CoreMod
 

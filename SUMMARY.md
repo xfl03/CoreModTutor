@@ -12,10 +12,10 @@
     * ByteCode字节码
     * ASM
 * 3 原版 CoreMod
-    * 直接修改class文件
-    * JavaAgent
-    * LaunchWrapper
-    * ModLauncher
+    * [直接修改class文件](3.1.md)
+    * [JavaAgent](3.2.md)
+    * [LaunchWrapper](3.3.md)
+    * [ModLauncher](3.4.md)
 * 4 FML CoreMod
     * [1.3.2-1.5.2](4.1.md)
     * [1.6.1-1.12.2](4.2.md)
