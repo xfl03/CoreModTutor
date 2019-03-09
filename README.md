@@ -6,8 +6,8 @@
 
 如果该教程以及其中的源代码存在问题或有其他疑问，欢迎通过 [GitHub Issue](https://github.com/xfl03/CoreModTutor/issues) 来提出。
 
-这是一篇比较全面的 CoreMod 教程，请选择性阅读自己需要的部分，当然如果能有耐心阅读所有内容当然是最好不过的。  
-原版 CoreMod 部分是从 FML 如何向 Minecraft 注入代码的角度进行原理分析，非必读内容。FML CoreMod 部分也可以直接阅读欲开发的版本。
+这是一篇比较全面的 CoreMod 教程，请选择性阅读自己需要的部分，当然如果能有耐心阅读完所有内容当然是最好不过的。  
+原版 CoreMod 部分是从 FML 如何向 Minecraft 注入代码的角度进行分析，非必读内容。FML CoreMod 部分也可以直接阅读欲开发的版本。
 
 ## 版权声明
 本教程作者为xfl03。

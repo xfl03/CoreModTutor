@@ -11,7 +11,7 @@ https://github.com/xfl03/MCCustomSkinLoader
 
 ### Alchemy
 
-* FML CoreMod / 1.10.2 + 1.12.2
+* FML CoreMod / 1.10.2-1.12.2
 
 https://github.com/AmadeusSystems/Alchemy
 
@@ -46,6 +46,10 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/instrument/package-summary.h
 ## fmltutor - ustc-zzzz
 
 https://fmltutor.ustc-zzzz.net/
+
+## Harbinger - 3TUSK
+
+https://harbinger.covertdragon.team/
 
 ## MCP&Forge教程 - 白玉楼之梦
 
