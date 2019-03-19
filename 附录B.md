@@ -1,4 +1,6 @@
-这是ASM中所有对应Java虚拟机指令的操作数，在ASM中用其指代JVM指令，可以用ACC_PUBLIC这样更有可读性的名字代替，也可以用数字表示
+这是ASM中所有的常量操作数，在ASM中用其指代JVM指令，可以用ACC_PUBLIC这样更有可读性的名字代替，也可以用数字表示
+
+
 public interface Opcodes {
 
     // ASM的版本，以下表述均合法
@@ -101,71 +103,73 @@ public interface Opcodes {
      * previous frame and with a single value on the stack.
      */
     int F_SAME1 = 4;
+    
 
-    // opcodes // visit method (- = idem)
-    //以下都是调用方法时所牵涉到的局部变量和操作数栈
+    //以下都是JVM指令，将常量名小写就是其对应的JVM指令，例如ACONST_NULL小写就是aconst_null指令
+    //1，2，3，4，5等对应的也是真实的JVM操作码，186对应ba
     //Insn是instruction的缩写，可以深入到方法内部去修改其变量和操作
     //CONST指常量，I指int，F指float，D指double，C指char，S指short，L指long，B指byte
-    //ADD，MIN，MUL，DIV指加减乘除
-    //AND，OR，XOR指与，或，或非
+    //ADD，MIN，MUL，DIV指加减乘除，IADD就是两个int相加    
+    //AND，OR，XOR指按位与，按位或，按位或非
     //2指的是to，例如I2B指int to byte
     //LOAD指入栈，STORE指出栈，ALOAD指任意局部变量入栈
     //RETURN指返回
 
     int NOP = 0; // visitInsn
-    int ACONST_NULL = 1; // -
-    int ICONST_M1 = 2; // -
-    int ICONST_0 = 3; // -
-    int ICONST_1 = 4; // -
-    int ICONST_2 = 5; // -
-    int ICONST_3 = 6; // -
-    int ICONST_4 = 7; // -
-    int ICONST_5 = 8; // -
-    int LCONST_0 = 9; // -
-    int LCONST_1 = 10; // -
-    int FCONST_0 = 11; // -
-    int FCONST_1 = 12; // -
-    int FCONST_2 = 13; // -
-    int DCONST_0 = 14; // -
-    int DCONST_1 = 15; // -
-    int BIPUSH = 16; // visitIntInsn
-    int SIPUSH = 17; // -
-    int LDC = 18; // visitLdcInsn
-    int ILOAD = 21; // visitVarInsn
-    int LLOAD = 22; // -
-    int FLOAD = 23; // -
-    int DLOAD = 24; // -
-    int ALOAD = 25; // -
-    int IALOAD = 46; // visitInsn
-    int LALOAD = 47; // -
-    int FALOAD = 48; // -
-    int DALOAD = 49; // -
-    int AALOAD = 50; // -
-    int BALOAD = 51; // -
-    int CALOAD = 52; // -
-    int SALOAD = 53; // -
-    int ISTORE = 54; // visitVarInsn
-    int LSTORE = 55; // -
-    int FSTORE = 56; // -
-    int DSTORE = 57; // -
-    int ASTORE = 58; // -
-    int IASTORE = 79; // visitInsn
-    int LASTORE = 80; // -
-    int FASTORE = 81; // -
-    int DASTORE = 82; // -
-    int AASTORE = 83; // -
-    int BASTORE = 84; // -
-    int CASTORE = 85; // -
-    int SASTORE = 86; // -
-    int POP = 87; // -
-    int POP2 = 88; // -
-    int DUP = 89; // -
-    int DUP_X1 = 90; // -
-    int DUP_X2 = 91; // -
-    int DUP2 = 92; // -
-    int DUP2_X1 = 93; // -
-    int DUP2_X2 = 94; // -
-    int SWAP = 95; // -
+    int ACONST_NULL = 1; // -将一个空引用推到栈顶
+    int ICONST_M1 = 2; // -将-1加载到栈顶
+    int ICONST_0 = 3; // -将0加载到栈顶
+    int ICONST_1 = 4; // -将1加载到栈顶
+    int ICONST_2 = 5; // -将2加载到栈顶
+    int ICONST_3 = 6; // -将3加载到栈顶
+    int ICONST_4 = 7; // -将4加载到栈顶
+    int ICONST_5 = 8; // -将5加载到栈顶（以上都是int）
+    int LCONST_0 = 9; // -将0L加载到栈顶
+    int LCONST_1 = 10; // -将1L加载到栈顶
+    int FCONST_0 = 11; // -将0F加载到栈顶
+    int FCONST_1 = 12; // -将1F加载到栈顶
+    int FCONST_2 = 13; // -将2F加载到栈顶
+    int DCONST_0 = 14; // -将0D加载到栈顶
+    int DCONST_1 = 15; // -将1D加载到栈顶
+    int BIPUSH = 16; // visitIntInsn -将byte值作为int推到栈顶
+    int SIPUSH = 17; // -将short作为int推到栈顶
+    int LDC = 18; // visitLdcInsn -从常量池 (可以是String, int, float, Class, java.lang.invoke.MethodType, or java.lang.invoke.MethodHandle)     中将一个#index常量推到栈顶
+    int ILOAD = 21; // visitVarInsn //从局部变量表中加载int值到栈顶
+    int LLOAD = 22; // -从局部变量表加载long到栈顶
+    int FLOAD = 23; // -从局部变量表加载float到栈顶
+    int DLOAD = 24; // -从局部变量表加载double到栈顶
+    int ALOAD = 25; // -从局部变量表加载Object引用到栈顶
+    int IALOAD = 46; // visitInsn -从数组加载int到栈顶
+    int LALOAD = 47; // -从数组加载long到栈顶
+    int FALOAD = 48; // -从数组加载float到栈顶
+    int DALOAD = 49; // -从数组加载double到栈顶
+    int AALOAD = 50; // -从数组加载Object引用到栈顶
+    int BALOAD = 51; // -从数组加载boolean值到栈顶
+    int CALOAD = 52; // -从数组加载char值到栈顶
+    int SALOAD = 53; // -从数组加载short到栈顶
+    int ISTORE = 54; // visitVarInsn 将int值保存到局部变量表
+    int LSTORE = 55; // -将long值保存到局部变量表
+    int FSTORE = 56; // -将float值保存到局部变量表
+    int DSTORE = 57; // -将double值保存到局部变量表
+    int ASTORE = 58; // -将Object引用保存到局部变量表
+    int IASTORE = 79; // visitInsn -将int值保存到数组中
+    int LASTORE = 80; // -将long值保存到数组中
+    int FASTORE = 81; // -将float值保存到数组中
+    int DASTORE = 82; // -将double值保存到数组中
+    int AASTORE = 83; // -将Object引用保存到数组中
+    int BASTORE = 84; // -将boolean值保存到数组中
+    int CASTORE = 85; // -将char值保存到数组中
+    int SASTORE = 86; // -将short值保存到数组中
+    int POP = 87; // -丢弃栈顶元素
+    int POP2 = 88; // -丢弃栈顶的两个元素（如果是double或long就只有一个）
+    int DUP = 89; // -复制栈顶元素
+    int DUP_X1 = 90; // -复制栈顶元素，并将其插入栈顶的两个元素下面，形如value2, value1 → value1, value2, value1 
+    int DUP_X2 = 91; // -复制栈顶元素，并将其插入栈顶的三个元素（前提是value2不能是double或long）或两个元素（这时value2是long或double，或占了value
+    3的位置，形如value3, value2, value1 → value1, value3, value2, value1 
+    int DUP2 = 92; // -复制栈顶的两个元素
+    int DUP2_X1 = 93; // -形如value3, {value2, value1} → {value2, value1}, value3, {value2, value1} 
+    int DUP2_X2 = 94; // -形如{value4, value3}, {value2, value1} → {value2, value1}, {value4, value3}, {value2, value1} 
+    int SWAP = 95; // -交换栈顶的两个值，注意两个值不能是double或long
     int IADD = 96; // -
     int LADD = 97; // -
     int FADD = 98; // -
@@ -203,7 +207,7 @@ public interface Opcodes {
     int IXOR = 130; // -
     int LXOR = 131; // -
     int IINC = 132; // visitIincInsn
-    int I2L = 133; // visitInsn
+    int I2L = 133; // visitInsn，将int转为long，以下类推
     int I2F = 134; // -
     int I2D = 135; // -
     int L2I = 136; // -
@@ -218,56 +222,56 @@ public interface Opcodes {
     int I2B = 145; // -
     int I2C = 146; // -
     int I2S = 147; // -
-    int LCMP = 148; // -
-    int FCMPL = 149; // -
+    int LCMP = 148; // -比较大小，如果value1>value2将1推到栈顶，相等则是0，反之则为-1
+    int FCMPL = 149; // -比较两个float，下同
     int FCMPG = 150; // -
-    int DCMPL = 151; // -
+    int DCMPL = 151; // -比较两个double，下同
     int DCMPG = 152; // -
-    int IFEQ = 153; // visitJumpInsn
-    int IFNE = 154; // -
-    int IFLT = 155; // -
-    int IFGE = 156; // -
-    int IFGT = 157; // -
-    int IFLE = 158; // -
-    int IF_ICMPEQ = 159; // -
-    int IF_ICMPNE = 160; // -
-    int IF_ICMPLT = 161; // -
-    int IF_ICMPGE = 162; // -
-    int IF_ICMPGT = 163; // -
-    int IF_ICMPLE = 164; // -
-    int IF_ACMPEQ = 165; // -
-    int IF_ACMPNE = 166; // -
-    int GOTO = 167; // -
-    int JSR = 168; // -
-    int RET = 169; // visitVarInsn
-    int TABLESWITCH = 170; // visiTableSwitchInsn
-    int LOOKUPSWITCH = 171; // visitLookupSwitch
+    int IFEQ = 153; // visitJumpInsn，当栈顶int型数值等于0时跳转
+    int IFNE = 154; // -当栈顶int型数值不等于0时跳转
+    int IFLT = 155; // -当栈顶int型数值小于0时跳转
+    int IFGE = 156; // -当栈顶int型数值大于等于0时跳转
+    int IFGT = 157; // -当栈顶int型数值大于0时跳转
+    int IFLE = 158; // -当栈顶int型数值小于等于0时跳转
+    int IF_ICMPEQ = 159; // -比较栈顶两int型数值大小，当结果等于0时跳转
+    int IF_ICMPNE = 160; // -比较栈顶两int型数值大小，当结果不等于0时跳转
+    int IF_ICMPLT = 161; // -比较栈顶两int型数值大小，当结果小于0时跳转
+    int IF_ICMPGE = 162; // -比较栈顶两int型数值大小，当结果大于等于0时跳转
+    int IF_ICMPGT = 163; // -比较栈顶两int型数值大小，当结果大于0时跳转
+    int IF_ICMPLE = 164; // -比较栈顶两int型数值大小，当结果小于等于0时跳转
+    int IF_ACMPEQ = 165; // -比较栈顶两Object引用，当结果相等时跳转
+    int IF_ACMPNE = 166; // -比较栈顶两Object引用，当结果不相等时跳转
+    int GOTO = 167; //-跳转
+    int JSR = 168; // -跳转至指定16位栈偏移位置，并将jsr下一条指令地址压入栈顶
+    int RET = 169; // visitVarInsn，返回至本地变量指定的#index的指令位置（一般与jsr, jsr_w联合使用）
+    int TABLESWITCH = 170; // visiTableSwitchInsn，用于switch条件跳转，case值连续（可变长度指令）
+    int LOOKUPSWITCH = 171; // visitLookupSwitch，用于switch条件跳转，case值不连续（可变长度指令）
     int IRETURN = 172; // visitInsn
     int LRETURN = 173; // -
     int FRETURN = 174; // -
     int DRETURN = 175; // -
     int ARETURN = 176; // -
-    int RETURN = 177; // -
-    int GETSTATIC = 178; // visitFieldInsn
-    int PUTSTATIC = 179; // -
-    int GETFIELD = 180; // -
-    int PUTFIELD = 181; // -
-    int INVOKEVIRTUAL = 182; // visitMethodInsn
-    int INVOKESPECIAL = 183; // -
-    int INVOKESTATIC = 184; // -
-    int INVOKEINTERFACE = 185; // -
-    int INVOKEDYNAMIC = 186; // visitInvokeDynamicInsn
-    int NEW = 187; // visitTypeInsn
-    int NEWARRAY = 188; // visitIntInsn
-    int ANEWARRAY = 189; // visitTypeInsn
-    int ARRAYLENGTH = 190; // visitInsn
-    int ATHROW = 191; // -
-    int CHECKCAST = 192; // visitTypeInsn
-    int INSTANCEOF = 193; // -
-    int MONITORENTER = 194; // visitInsn
-    int MONITOREXIT = 195; // -
+    int RETURN = 177; // -返回void
+    int GETSTATIC = 178; // visitFieldInsn，获取指定类的静态字段，并将其值推到栈顶
+    int PUTSTATIC = 179; // -为指定类的静态字段赋值
+    int GETFIELD = 180; // -获取指定类的实例字段，并将其值推到栈顶
+    int PUTFIELD = 181; // -为指定的类的实例字段赋值
+    int INVOKEVIRTUAL = 182; // visitMethodInsn，调用实例方法（Java中所有的方法都是可以直接覆写的虚方法，所以叫virtual）
+    int INVOKESPECIAL = 183; // -调用超类构造方法，实例初始化方法，私有方法
+    int INVOKESTATIC = 184; // -调用静态方法
+    int INVOKEINTERFACE = 185; // -调用接口方法
+    int INVOKEDYNAMIC = 186; // visitInvokeDynamicInsn 调用动态方法
+    int NEW = 187; // visitTypeInsn 创建对象
+    int NEWARRAY = 188; // visitIntInsn 创建基本类型数组
+    int ANEWARRAY = 189; // visitTypeInsn 创建对象数组
+    int ARRAYLENGTH = 190; // visitInsn 将数组长度推入栈顶
+    int ATHROW = 191; // -将栈顶的异常抛出
+    int CHECKCAST = 192; // visitTypeInsn 检验类型转换，检验未通过将抛出ClassCastException
+    int INSTANCEOF = 193; // -检验对象是否是指定的类的实例，如果是将1推入栈顶，否则将0推入栈顶
+    int MONITORENTER = 194; // visitInsn 获得对象的锁
+    int MONITOREXIT = 195; // -释放对象锁
     int MULTIANEWARRAY = 197; // visitMultiANewArrayInsn
-    int IFNULL = 198; // visitJumpInsn
-    int IFNONNULL = 199; // -
+    int IFNULL = 198; // visitJumpInsn 如果栈顶元素null时跳转
+    int IFNONNULL = 199; // -栈顶元素不为null时跳转
 }
 
