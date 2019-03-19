@@ -27,6 +27,13 @@ https://github.com/yushijinhun/authlib-injector
 
 https://github.com/RecursiveG/UniSkinMod
 
+### OfflineSkins
+
+* FML CoreMod / 1.7.10-1.12.2 + 1.13.2
+* Fabric CoreMod / 1.14snapshot
+
+https://github.com/zlainsama/OfflineSkins
+
 ## The Java Virtual Machine Specification - Oracle
 
 https://docs.oracle.com/javase/specs/jvms/se8/html/index.html
@@ -50,6 +57,10 @@ https://fmltutor.ustc-zzzz.net/
 ## Harbinger - 3TUSK
 
 https://harbinger.covertdragon.team/
+
+## 俩车的 Coremod 介绍 - liach
+
+http://www.mcbbs.net/thread-849970-1-1.html
 
 ## MCP&Forge教程 - 白玉楼之梦
 
