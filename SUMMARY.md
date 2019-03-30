@@ -5,7 +5,7 @@
 * [0 绪论](0.md)
 * 1 简介
     * [CoreMod](1.1.md)
-    * Java虚拟机
+    * [Java虚拟机](1.2.md)
     * [Minecraft混淆方式](1.3.md)
 * 2 Java虚拟机
     * ClassLoader类加载器

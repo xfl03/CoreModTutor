@@ -33,7 +33,7 @@
 ### 1 简介
 
 * [CoreMod](1.1.md)
-* Java虚拟机
+* [Java虚拟机](1.2.md)
 * [Minecraft混淆方式](1.3.md)
 
 ### 2 Java虚拟机
