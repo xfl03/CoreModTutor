@@ -1,6 +1,6 @@
 这是ASM中所有的常量操作数，在ASM中用其指代JVM指令，可以用ACC_PUBLIC这样更有可读性的名字代替，也可以用数字表示
 
-
+```java
 public interface Opcodes {
 
     // ASM的版本，以下表述均合法
@@ -274,4 +274,4 @@ public interface Opcodes {
     int IFNULL = 198; // visitJumpInsn 如果栈顶元素null时跳转
     int IFNONNULL = 199; // -栈顶元素不为null时跳转
 }
-
+```
