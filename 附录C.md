@@ -34,6 +34,29 @@ https://github.com/RecursiveG/UniSkinMod
 
 https://github.com/zlainsama/OfflineSkins
 
+### Hyperium
+
+* Mixin / 原版 1.8.9
+
+https://github.com/HyperiumClient/Hyperium
+
+### ReplayMod
+
+* Mixin / Forge 1.7.10-1.12.2
+* Fabric CoreMod / 1.14.4
+
+https://github.com/ReplayMod/ReplayMod
+
+### CubicChunks
+
+* Mixin / 
+
+### ChatTriggers
+
+* Mixin / Forge 1.8.9 + 1.12.2
+
+https://github.com/ChatTriggers/ct.js
+
 ## The Java Virtual Machine Specification - Oracle
 
 https://docs.oracle.com/javase/specs/jvms/se8/html/index.html
@@ -69,3 +92,7 @@ http://blog.hakugyokurou.net/?page_id=126
 ## Coremod导论—从切比雪夫多项式说起 - 森林蝙蝠
 
 http://www.mcbbs.net/thread-822754-1-1.html
+
+## Mixin 介绍 - 耗子
+
+https://mouse0w0.github.io/categories/Mixin/
