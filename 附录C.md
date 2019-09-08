@@ -5,7 +5,7 @@
 ### CustomSkinLoader
 
 * 原版 CoreMod / 直接修改class文件 + LaunchWrapper
-* FML CoreMod / 1.8-1.12.2 + 1.13.2
+* FML CoreMod / 1.8-1.12.2 + 1.13.2-1.14.4
 
 https://github.com/xfl03/MCCustomSkinLoader
 

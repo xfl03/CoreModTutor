@@ -12,7 +12,7 @@ Minecraft Wiki：https://minecraft.gamepedia.com/Programs_and_editors/Mod_Coder_
 
 ## MCPConfig
 
-可以构建1.13大版本的notch-srg映射表。
+可以构建1.13以及1.14发行版本的notch-srg映射表。
 
 https://github.com/MinecraftForge/MCPConfig
 
@@ -22,8 +22,21 @@ https://github.com/MinecraftForge/MCPConfig
 
 http://export.mcpbot.bspk.rs/
 
-## Forge Gradle
+## ForgeGradle
 
 Forge提供的Gradle插件，一般直接在官网下载MDK即可。
 
 http://files.minecraftforge.net/
+
+## Mojang 混淆表
+
+从1.14.4开始，Mojang会公开官方混淆表，版本json的`downloads`中的`client_mappings`包含下载地址。混淆表以ProGuard导出数据的形式提供。  
+版本json可以在以下地址中获取。
+
+https://launchermeta.mojang.com/mc/game/version_manifest.json
+
+## Bukkit 混淆表
+
+可以从Spigot的Git上进行下载。
+
+https://hub.spigotmc.org/stash/projects/SPIGOT/repos/builddata/browse/mappings
