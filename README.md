@@ -1,4 +1,4 @@
-# Minecraft 1.3.2-1.13.2 原版 / FML CoreMod 开发教程
+# Minecraft 1.3.2-1.14.4 原版 / FML CoreMod 开发教程
 
 [**蓝色**](#)的链接表示这部分已写完，**黑色**的文本表示尚未完成。
 
@@ -6,11 +6,11 @@
 
 如果该教程以及其中的源代码存在问题或有其他疑问，欢迎通过 [GitHub Issue](https://github.com/xfl03/CoreModTutor/issues) 来提出。
 
-这是一篇比较全面的 CoreMod 教程，请选择性阅读自己需要的部分，当然如果能有耐心阅读完所有内容当然是最好不过的。  
-原版 CoreMod 部分是从 FML 如何向 Minecraft 注入代码的角度进行分析，非必读内容。FML CoreMod 部分也可以直接阅读欲开发的版本。
+这是一篇比较全面的 CoreMod 教程，也是对于开发 CoreMod 过程的记录。请选择性阅读自己需要的部分，当然如果能有耐心阅读完所有内容当然是最好不过的。  
+原版 CoreMod 部分是从 FML 如何向 Minecraft 注入代码的角度进行分析，非必读内容；FML CoreMod 部分也可以直接阅读欲开发的版本。
 
 ## 版权声明
-本教程作者为xfl03。
+本教程作者为 [xfl03](https://github.com/xfl03) ，Mixin部分作者为[ZekerZhayard](https://github.com/ZekerZhayard) 。感谢各位贡献者的辛勤付出，完整贡献者名单请参阅 [GitHub](https://github.com/xfl03/CoreModTutor/graphs/contributors) 。
 
 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
     <img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" />
@@ -53,7 +53,7 @@
 
 * [1.3.2-1.5.2](4.1.md)
 * [1.6.1-1.12.2](4.2.md)
-* [1.13.2](4.3.md)
+* [1.13.2-1.14.4](4.3.md)
 
 ### [5 Mixin](5.md)
 
