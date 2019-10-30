@@ -5,12 +5,10 @@
 * [0 绪论](0.md)
 * 1 简介
     * [CoreMod](1.1.md)
-    * [Java虚拟机](1.2.md)
-    * [Minecraft混淆方式](1.3.md)
-* 2 Java虚拟机
-    * ClassLoader类加载器
-    * ByteCode字节码
-    * ASM
+    * [Minecraft混淆方式](1.2.md)
+* [2 Java虚拟机](2.md)
+    * [ClassLoader类加载器](2.1.md)
+    * [ByteCode字节码](2.2.md)
 * 3 原版 CoreMod
     * [直接修改class文件](3.1.md)
     * [JavaAgent](3.2.md)
@@ -29,6 +27,7 @@
     * [融合](5.6.md)
     * [扩展](5.7.md)
     * [调试](5.8.md)
+* 6 ASM
 * 附录
     * [附录A 相关工具下载](附录A.md)
     * [附录B 常见Java字节码指令表](附录B.md)
