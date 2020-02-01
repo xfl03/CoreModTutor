@@ -1,7 +1,7 @@
 # Summary
 
 * [源代码仓库（求star）](https://github.com/xfl03/CoreModTutor)
-* [目录](book/README.md)
+* [目录](README.md)
 * [0 绪论](book/0.md)
 * 1 简介
     * [CoreMod](book/1.1.md)
@@ -17,7 +17,7 @@
 * 4 FML CoreMod
     * [1.3.2-1.5.2](book/4.1.md)
     * [1.6.1-1.12.2](book/4.2.md)
-    * [1.13.2-1.14.4](book/4.3.md)
+    * [1.13.2-1.15.2](book/4.3.md)
 * [5 Mixin](book/5.md)
     * [配置](book/5.1.md)
     * [引导](book/5.2.md)
